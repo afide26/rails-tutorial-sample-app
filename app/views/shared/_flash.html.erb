@@ -1,0 +1,13 @@
+<% flash.each do |type, message| %>
+    <% if flash[:notice] %>
+        <div class="alert alert-success fade-in">
+            <button class="close" data-dismiss="alert"><i class="fa fa-times-circle"></i></button>
+            <%= message %>
+        </div>
+    <% else %>
+        <div class="alert alert-<%= type %> fade-in">
+            <button class="close" data-dismiss="alert"><i class="fa fa-times-circle"></i></button>
+            <%= message %>
+        </div>
+    <% end %>
+<% end %>
